@@ -1,0 +1,89 @@
+Q.2 Write a Program to create an Employee Record System with an Array of objects for a given N number of employees using structure. Consider the below-mentioned attributes in the Employee structure:
+- emp_id
+- emp_name
+- emp_age
+- emp_role
+- emp_city
+- emp_experience
+- emp_company_name
+input==
+
+#include <stdio.h>
+#include <string.h>
+
+struct Employee {
+    int emp_id;
+    char emp_name[50];
+    int emp_age;
+    char emp_role[50];
+    char emp_city[50];
+    int emp_experience;
+    char emp_company_name[50];
+};
+
+int main() {
+    int n;
+    printf("Enter the number of employees: ");
+    scanf("%d", &n);
+    
+    struct Employee employees[n];
+
+    for (int i = 0; i < n; i++) {
+        printf("\nEnter the details of employee %d:\n", i++);
+        printf("ID: ");
+        scanf("%d", &employees[i].emp_id);
+        printf("Name: ");
+        scanf("%s", employees[i].emp_name);
+        printf("Age: ");
+        scanf("%d", &employees[i].emp_age);
+        printf("Role: ");
+        scanf("%s", employees[i].emp_role);
+        printf("City: ");
+        scanf("%s", employees[i].emp_city);
+        printf("Experience: ");
+        scanf("%d", &employees[i].emp_experience);
+        printf("Company Name: ");
+        scanf("%s", employees[i].emp_company_name);
+    }
+    
+    printf("\nEmployee Records:\n");
+    for (int i = 0; i < n; i++) {
+        printf("\nEmployee %d:\n", i++);
+        printf("ID: %d\n", employees[i].emp_id);
+        printf("Name: %s\n", employees[i].emp_name);
+        printf("Age: %d\n", employees[i].emp_age);
+        printf("Role: %s\n", employees[i].emp_role);
+        printf("City: %s\n", employees[i].emp_city);
+        printf("Experience: %d\n", employees[i].emp_experience);
+        printf("Company Name: %s\n", employees[i].emp_company_name);
+    }
+
+    return 0;
+}
+
+output=
+/tmp/CSODBxRPuO.o
+Enter the number of employees: 1
+
+Enter the details of employee 0:
+ID: 1
+Name: rutul
+Age: 22
+Role: develoer
+City: ahmedabad
+Experience: 2
+Company Name: xyz
+
+Employee Records:
+
+Employee 0:
+ID: 1
+Name: rutul
+Age: 22
+Role: developer
+City: ahmedabad
+Experience: 2
+Company Name: xyz
+
+
+=== Code Execution Successful ===
